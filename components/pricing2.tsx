@@ -160,12 +160,12 @@ const Pricing2 = ({
           <p className="rounded-full border border-[#bfd2ff] bg-[#edf3ff] px-4 py-1 text-sm font-medium text-[#1f3f8f]">
             Без скрытых условий, отмена в любой момент
           </p>
-          <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
+          <div className="flex w-full flex-col items-center gap-6 md:flex-row md:items-stretch md:justify-center">
             {plans.map((plan) => (
               <Card
                 key={plan.id}
                 className={cn(
-                  "relative flex w-80 flex-col justify-between border-[#dbe7ff] bg-white/90 text-left shadow-sm",
+                  "relative flex w-full max-w-sm flex-col justify-between border-[#dbe7ff] bg-white/90 text-left shadow-sm md:w-80",
                   plan.recommended &&
                     "ring-2 ring-primary shadow-xl shadow-primary/25"
                 )}

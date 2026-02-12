@@ -89,19 +89,19 @@ const Hero243 = ({
           </div>
         </div>
         <ul className="mx-auto grid h-44 w-full max-w-5xl grid-cols-1 border border-b-0 border-dashed md:h-34 md:grid-cols-2 lg:h-24 lg:grid-cols-3">
-          <li className="flex h-full items-center justify-between gap-10 px-5 md:gap-3 lg:justify-center">
+          <li className="flex h-full items-center justify-center gap-3 px-5 text-center">
             <div className="flex size-12 items-center justify-center rounded-lg bg-muted">
               <Zap className="size-6 text-muted-foreground" />
             </div>
             <p className="text-lg text-muted-foreground">{metrics[0]}</p>
           </li>
-          <li className="flex h-full items-center justify-between gap-10 border-t border-l border-dashed px-5 md:gap-3 lg:justify-center lg:border-t-0">
+          <li className="flex h-full items-center justify-center gap-3 border-t border-l border-dashed px-5 text-center lg:border-t-0">
             <div className="flex size-12 items-center justify-center rounded-lg bg-muted">
               <Users className="size-6 text-muted-foreground" />
             </div>
             <p className="text-lg text-muted-foreground">{metrics[1]}</p>
           </li>
-          <li className="col-span-1 flex h-full items-center justify-between gap-10 border-t border-l border-dashed px-5 md:col-span-2 md:justify-center md:gap-3 lg:col-span-1 lg:border-t-0">
+          <li className="col-span-1 flex h-full items-center justify-center gap-3 border-t border-l border-dashed px-5 text-center md:col-span-2 lg:col-span-1 lg:border-t-0">
             <div className="flex size-12 items-center justify-center rounded-lg bg-muted">
               <TrendingUp className="size-6 text-muted-foreground" />
             </div>
