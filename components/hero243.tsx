@@ -12,8 +12,8 @@ interface Hero243Props {
 
 const Hero243 = ({ className }: Hero243Props) => {
   return (
-    <section className={cn("h-full w-screen overflow-hidden py-32", className)}>
-      <div className="container border-t border-b border-dashed">
+    <section className={cn("h-full w-full overflow-hidden py-32", className)}>
+      <div className="container mx-auto border-t border-b border-dashed">
         <div className="relative flex w-full max-w-5xl flex-col justify-start border border-t-0 border-dashed px-5 py-12 md:items-center md:justify-center lg:mx-auto">
           <p className="flex items-center gap-2 gap-3 text-sm text-muted-foreground">
             <span className="inline-block size-2 rounded bg-green-500" />
