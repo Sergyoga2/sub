@@ -95,7 +95,7 @@ const Feature43 = ({
             <div className="mt-16 flex justify-center">
               <Button
                 size="lg"
-                className="h-14 px-8 text-base font-semibold transition hover:brightness-110 hover:shadow-lg"
+                className="h-14 bg-[#2663ec] px-8 text-base font-semibold text-white transition hover:bg-[#3c64ff] hover:shadow-lg"
                 asChild
               >
                 <a href={buttonUrl}>{buttonText}</a>

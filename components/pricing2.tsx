@@ -151,7 +151,7 @@ const Pricing2 = ({
                 <CardFooter className="mt-auto">
                   <Button
                     asChild
-                    className="h-12 w-full text-base font-semibold transition hover:brightness-110 hover:shadow-lg"
+                    className="h-12 w-full bg-[#2663ec] text-base font-semibold text-white transition hover:bg-[#3c64ff] hover:shadow-lg"
                   >
                     <a href={plan.button.url} target="_blank">
                       {plan.button.text}
