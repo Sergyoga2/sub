@@ -56,11 +56,11 @@ const Feature15 = ({ className }: Feature15Props) => {
               реальный результат.
             </p>
             <Image
-              src="/hexlet-tracks.svg"
+              src="/feature-format.svg"
               alt="Траектории обучения в подписке"
-              width={720}
-              height={420}
-              className="mt-4 rounded-2xl border border-[#d5e4ff] shadow-lg shadow-[#2663ec]/10"
+              width={420}
+              height={260}
+              className="mt-4 w-full max-w-md rounded-2xl border border-[#d5e4ff] shadow-lg shadow-[#2663ec]/10"
             />
           </div>
         </div>

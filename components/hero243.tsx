@@ -78,7 +78,7 @@ const Hero243 = ({
             </ul>
             <div className="px-5 pt-4">
               <Image
-                src="/hexlet-learning.svg"
+                src="/hero-programming.svg"
                 alt="Платформа Hexlet с практикой и навыками"
                 width={720}
                 height={420}

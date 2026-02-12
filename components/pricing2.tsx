@@ -34,6 +34,11 @@ interface Pricing2Props {
   sectionId?: string;
   heading?: string;
   description?: string;
+  paymentHint?: {
+    text: string;
+    linkText: string;
+    linkUrl: string;
+  };
   plans?: PricingPlan[];
   className?: string;
 }
@@ -42,6 +47,7 @@ const Pricing2 = ({
   sectionId,
   heading = "Pricing",
   description = "Check out our affordable pricing plans",
+  paymentHint,
   plans = [
     {
       id: "plus",
@@ -113,17 +119,19 @@ const Pricing2 = ({
               <Card
                 key={plan.id}
                 className={cn(
-                  "flex w-80 flex-col justify-between border-[#dbe7ff] bg-white/90 text-left shadow-sm",
+                  "relative flex w-80 flex-col justify-between border-[#dbe7ff] bg-white/90 text-left shadow-sm",
                   plan.recommended &&
                     "ring-2 ring-primary shadow-xl shadow-primary/25"
                 )}
               >
-                <CardHeader>
-                  {plan.recommended && (
-                    <div className="mb-3 inline-flex w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                {plan.recommended && (
+                  <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2">
+                    <div className="inline-flex w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
                       Рекомендуемый
                     </div>
-                  )}
+                  </div>
+                )}
+                <CardHeader>
                   <CardTitle>
                     <p>{plan.name}</p>
                   </CardTitle>
@@ -164,6 +172,17 @@ const Pricing2 = ({
               </Card>
             ))}
           </div>
+          {paymentHint && (
+            <p className="text-sm text-muted-foreground">
+              {paymentHint.text}{" "}
+              <a
+                href={paymentHint.linkUrl}
+                className="font-semibold text-[#2663ec] underline-offset-2 hover:text-[#3c64ff] hover:underline"
+              >
+                {paymentHint.linkText}
+              </a>
+            </p>
+          )}
         </div>
       </div>
     </section>

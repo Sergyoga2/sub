@@ -13,8 +13,10 @@ import {
 import { Cta10 } from "@/components/cta10";
 import { Feature15 } from "@/components/feature15";
 import { Faq5 } from "@/components/faq5";
+import { GraduateTestimonials } from "@/components/graduate-testimonials";
 import { Hero243 } from "@/components/hero243";
 import { Feature43 } from "@/components/feature43";
+import { LearningFormatSection } from "@/components/learning-format-section";
 import { Pricing2 } from "@/components/pricing2";
 import { RevealSection } from "@/components/reveal-section";
 
@@ -43,9 +45,9 @@ export default function Home() {
       />
       </RevealSection>
       <RevealSection className="section-soft">
-        <Feature43
+      <Feature43
         title="Что вы получаете в подписке"
-        buttonText="Оформить подписку"
+        buttonText="Выбрать подписку"
         buttonUrl="#pricing"
         className="py-16 md:py-20"
         features={[
@@ -89,9 +91,9 @@ export default function Home() {
       />
       </RevealSection>
       <RevealSection className="section-tint">
-        <Feature43
+      <Feature43
         title="Какие результаты даёт подписка"
-        buttonText="Начать обучение"
+        buttonText="Выбрать подписку"
         buttonUrl="#pricing"
         className="py-16 md:py-20"
         features={[
@@ -139,6 +141,11 @@ export default function Home() {
         sectionId="pricing"
         heading="Тарифы подписки Hexlet"
         description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
+        paymentHint={{
+          text: "Для оплаты картой выпущенной не в РФ",
+          linkText: "нажмите здесь",
+          linkUrl: "https://hexlet.io/subscription/new",
+        }}
         className="py-16 md:py-20"
         plans={[
           {
@@ -198,6 +205,12 @@ export default function Home() {
       />
       </RevealSection>
       <RevealSection className="section-soft">
+        <GraduateTestimonials />
+      </RevealSection>
+      <RevealSection className="section-soft">
+        <LearningFormatSection />
+      </RevealSection>
+      <RevealSection className="section-soft">
         <Feature15 className="py-16 md:py-20" />
       </RevealSection>
       <RevealSection className="section-tint">
@@ -241,17 +254,13 @@ export default function Home() {
       />
       </RevealSection>
       <RevealSection className="section-soft">
-        <Cta10
+      <Cta10
         className="py-16 md:py-20"
         heading="Начните прокачку навыков сегодня"
         description="Оформите подписку и получите доступ ко всем 56 навыкам Hexlet. Чем раньше начнёте, тем быстрее увидите результат в работе и карьере."
         buttons={{
           primary: {
-            text: "Оформить подписку",
-            url: "#pricing",
-          },
-          secondary: {
-            text: "Посмотреть тарифы",
+            text: "Выбрать подписку",
             url: "#pricing",
           },
         }}
