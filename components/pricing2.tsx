@@ -1,4 +1,7 @@
+ "use client";
+
 import { CircleCheck } from "lucide-react";
+import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -103,8 +106,45 @@ const Pricing2 = ({
   ],
   className,
 }: Pricing2Props) => {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [showBurst, setShowBurst] = useState(false);
+  const [burstPlayed, setBurstPlayed] = useState(false);
+
+  useEffect(() => {
+    if (!sectionRef.current || burstPlayed) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || burstPlayed) return;
+        setShowBurst(true);
+        setBurstPlayed(true);
+        window.setTimeout(() => setShowBurst(false), 1400);
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, [burstPlayed]);
+
+  const burstDots = useMemo(
+    () => [
+      { x: "-100px", y: "-75px", color: "#3c64ff", delay: "0ms" },
+      { x: "-60px", y: "-110px", color: "#1cb8be", delay: "120ms" },
+      { x: "10px", y: "-120px", color: "#2663ec", delay: "40ms" },
+      { x: "85px", y: "-95px", color: "#22c55e", delay: "90ms" },
+      { x: "110px", y: "-30px", color: "#06b6d4", delay: "30ms" },
+      { x: "100px", y: "45px", color: "#3c64ff", delay: "110ms" },
+      { x: "40px", y: "95px", color: "#22c55e", delay: "70ms" },
+      { x: "-35px", y: "100px", color: "#1cb8be", delay: "20ms" },
+      { x: "-95px", y: "50px", color: "#2663ec", delay: "150ms" },
+      { x: "-120px", y: "-10px", color: "#06b6d4", delay: "60ms" },
+    ],
+    []
+  );
+
   return (
-    <section id={sectionId} className={cn("py-32", className)}>
+    <section id={sectionId} ref={sectionRef} className={cn("py-32", className)}>
       <div className="container mx-auto">
         <div className="pricing-highlight mx-auto flex w-full max-w-5xl flex-col items-center gap-6 border border-[#d7e4ff] p-8 text-center md:p-12">
           <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
@@ -129,6 +169,24 @@ const Pricing2 = ({
                     <div className="inline-flex w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
                       Рекомендуемый
                     </div>
+                  </div>
+                )}
+                {plan.recommended && showBurst && (
+                  <div className="pointer-events-none absolute inset-0 overflow-visible">
+                    {burstDots.map((dot, index) => (
+                      <span
+                        key={index}
+                        className="yearly-confetti"
+                        style={
+                          {
+                            "--x": dot.x,
+                            "--y": dot.y,
+                            backgroundColor: dot.color,
+                            animationDelay: dot.delay,
+                          } as CSSProperties
+                        }
+                      />
+                    ))}
                   </div>
                 )}
                 <CardHeader>

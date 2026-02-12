@@ -60,7 +60,7 @@ const Feature15 = ({ className }: Feature15Props) => {
               alt="Траектории обучения в подписке"
               width={420}
               height={260}
-              className="mt-4 w-full max-w-md rounded-2xl border border-[#d5e4ff] shadow-lg shadow-[#2663ec]/10"
+              className="mt-4 w-full max-w-md"
             />
           </div>
         </div>

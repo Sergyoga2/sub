@@ -97,7 +97,7 @@ const LearningFormatSection = ({ className }: LearningFormatSectionProps) => {
                 </p>
               </div>
 
-              <div className="relative overflow-hidden rounded-xl border border-[#dbe7ff] bg-[#eef4ff]">
+              <div className="relative overflow-hidden rounded-xl border border-[#dbe7ff] bg-[#eef4ff] pt-[30px] pb-[30px]">
                 <video
                   key={activeItem.videoUrl}
                   src={activeItem.videoUrl}

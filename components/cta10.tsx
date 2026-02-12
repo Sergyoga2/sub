@@ -41,7 +41,7 @@ const Cta10 = ({
             alt="Обучение в комфортном ритме"
             width={280}
             height={180}
-            className="rounded-xl border border-[#d5e4ff] shadow-md"
+            className=""
           />
           <div className="flex shrink-0 flex-col items-center gap-2">
             {buttons.primary && (
