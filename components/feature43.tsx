@@ -71,32 +71,34 @@ const Feature43 = ({
 }: Feature43Props) => {
   return (
     <section className={cn("py-32", className)}>
-      <div className="container">
-        {title && (
-          <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h2 className="text-4xl font-medium text-pretty lg:text-5xl">
-              {title}
-            </h2>
-          </div>
-        )}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, i) => (
-            <div key={i} className="flex flex-col items-center text-center">
-              <div className="mb-5 flex size-16 items-center justify-center rounded-full bg-accent">
-                {feature.icon}
-              </div>
-              <h3 className="mb-2 text-xl font-semibold">{feature.heading}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+      <div className="container mx-auto">
+        <div className="mx-auto w-full max-w-5xl">
+          {title && (
+            <div className="mx-auto mb-16 max-w-3xl text-center">
+              <h2 className="text-4xl font-medium text-pretty lg:text-5xl">
+                {title}
+              </h2>
             </div>
-          ))}
-        </div>
-        {buttonUrl && (
-          <div className="mt-16 flex justify-center">
-            <Button size="lg" asChild>
-              <a href={buttonUrl}>{buttonText}</a>
-            </Button>
+          )}
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                <div className="mb-5 flex size-16 items-center justify-center rounded-full bg-accent">
+                  {feature.icon}
+                </div>
+                <h3 className="mb-2 text-xl font-semibold">{feature.heading}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
           </div>
-        )}
+          {buttonUrl && (
+            <div className="mt-16 flex justify-center">
+              <Button size="lg" asChild>
+                <a href={buttonUrl}>{buttonText}</a>
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
