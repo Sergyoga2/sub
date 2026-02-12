@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 interface Hero243Props {
   badgeText?: string;
   headingStart?: string;
+  headingSecondLine?: string;
   headingFlipWords?: string[];
   description?: string;
   buttonText?: string;
@@ -20,6 +21,7 @@ interface Hero243Props {
 const Hero243 = ({
   badgeText = "56 НАВЫКОВ В ОДНОЙ ПОДПИСКЕ",
   headingStart = "Прокачивайте",
+  headingSecondLine = "",
   headingFlipWords = ["Программирование", "Аналитику", "Карьеру", "Навыки"],
   description = "Подписка Hexlet открывает каталог из 56 практических навыков: от Python и JavaScript до SQL, Data Analytics и системного мышления.",
   buttonText = "Выбрать подписку",
@@ -41,8 +43,8 @@ const Hero243 = ({
           </p>
           <div className="mt-3 mb-7 w-full max-w-xl text-5xl font-medium font-semibold tracking-tighter md:mb-10 md:text-center md:text-6xl lg:relative lg:mb-0 lg:text-left lg:text-7xl">
             <h1 className="relative z-10 inline md:mr-3">
-              {headingStart} <br className="block md:hidden" />{" "}
-              <br className="block md:hidden" />
+              {headingStart} <br className="block md:hidden" />
+              {headingSecondLine && headingSecondLine}
             </h1>
             <ContainerTextFlip
               className="absolute text-4xl font-medium font-semibold tracking-tighter md:bottom-4 md:left-1/2 md:-translate-x-1/2 md:text-5xl lg:-bottom-4 lg:left-auto lg:translate-x-0 lg:text-7xl"

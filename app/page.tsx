@@ -20,15 +20,21 @@ export default function Home() {
   return (
     <main>
       <Hero243
-        headingStart="Растите в"
-        headingFlipWords={["Программировании", "Аналитике", "Профессии"]}
-        description="Hexlet Pro Skills - это подписка на каталог из 56 навыков для разработчиков и аналитиков. Учитесь в удобном темпе и сразу закрепляйте материал на практике."
+        headingStart="Подписка на курсы"
+        headingSecondLine="Хекслета для"
+        headingFlipWords={[
+          "Тестировщиков",
+          "Дата аналитиков",
+          "Разработчиков",
+          "DevOps-инженеров",
+        ]}
+        description="Систематизируйте свои знания, готовьтесь к техническим собеседованиям, растите в карьере"
         buttonText="Выбрать подписку"
-        buttonUrl="https://subscription.hexlet.io/plans"
+        buttonUrl="#pricing"
         metrics={[
-          "56 навыков в одном каталоге",
+          "56 навыков в каталоге",
           "Понятные треки для роста",
-          "Практика и обратная связь",
+          "Более 2000 заданий",
         ]}
       />
       <Feature43
@@ -77,7 +83,7 @@ export default function Home() {
       <Feature43
         title="Какие результаты даёт подписка"
         buttonText="Начать обучение"
-        buttonUrl="https://subscription.hexlet.io/plans"
+        buttonUrl="#pricing"
         features={[
           {
             heading: "Уверенный рост в коде",
@@ -118,20 +124,23 @@ export default function Home() {
         ]}
       />
       <Pricing2
+        sectionId="pricing"
         heading="Тарифы подписки Hexlet Pro Skills"
         description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
         plans={[
           {
             id: "month",
             name: "Месячный",
-            description: "Для быстрого старта",
-            price: "1 990 ₽",
+            description: "Для знакомства с платформой",
+            price: "3 900 ₽",
             period: "/мес",
             features: [
-              { text: "Доступ ко всем 56 навыкам" },
-              { text: "Практические задания в каждом навыке" },
-              { text: "Гибкий темп обучения" },
-              { text: "Отмена в любой момент" },
+              { text: "Более 45 курсов" },
+              { text: "130+ навыков для развития" },
+              { text: "AI-помощник по обучению" },
+              { text: "Онлайн-тренажер 24/7 с автопроверками" },
+              { text: "Учебные проекты для тренировки" },
+              { text: "Доступ в закрытое сообщество" },
             ],
             button: {
               text: "Выбрать месячный",
@@ -141,17 +150,33 @@ export default function Home() {
           {
             id: "year",
             name: "Годовой",
-            description: "Максимальная выгода",
-            price: "14 900 ₽",
-            period: "/год",
+            description: "Для непрерывного роста",
+            price: "2 900 ₽",
+            period: "/мес",
             features: [
-              { text: "Все преимущества месячного тарифа" },
-              { text: "Экономия относительно помесячной оплаты" },
-              { text: "Фокус на долгосрочный рост навыков" },
-              { text: "Приоритет для карьерного апгрейда" },
+              { text: "Выгода 25%" },
+              { text: "При оплате 34 800 ₽ за год" },
+              { text: "Те же опции, но дешевле" },
             ],
             button: {
               text: "Выбрать годовой",
+              url: "https://subscription.hexlet.io/plans",
+            },
+          },
+          {
+            id: "three-year",
+            name: "Трехлетний",
+            description: "Максимальная выгода без ограничений",
+            price: "2 400 ₽",
+            period: "/мес",
+            features: [
+              { text: "Выгода 38%" },
+              { text: "При оплате 86 400 ₽ за три года" },
+              { text: "Все курсы Хекслета доступны для прохождения" },
+              { text: "Лучший тариф для долгосрочного роста" },
+            ],
+            button: {
+              text: "Выбрать трехлетний",
               url: "https://subscription.hexlet.io/plans",
             },
           },
@@ -198,11 +223,11 @@ export default function Home() {
         buttons={{
           primary: {
             text: "Оформить подписку",
-            url: "https://subscription.hexlet.io/plans",
+            url: "#pricing",
           },
           secondary: {
             text: "Посмотреть тарифы",
-            url: "https://subscription.hexlet.io/plans",
+            url: "#pricing",
           },
         }}
       />

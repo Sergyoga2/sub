@@ -30,6 +30,7 @@ interface PricingPlan {
 }
 
 interface Pricing2Props {
+  sectionId?: string;
   heading?: string;
   description?: string;
   plans?: PricingPlan[];
@@ -37,6 +38,7 @@ interface Pricing2Props {
 }
 
 const Pricing2 = ({
+  sectionId,
   heading = "Pricing",
   description = "Check out our affordable pricing plans",
   plans = [
@@ -95,7 +97,7 @@ const Pricing2 = ({
   className,
 }: Pricing2Props) => {
   return (
-    <section className={cn("py-32", className)}>
+    <section id={sectionId} className={cn("py-32", className)}>
       <div className="container mx-auto">
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 text-center">
           <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
