@@ -59,7 +59,7 @@ const Feature15 = ({ className }: Feature15Props) => {
         <div className="mx-auto mt-20 grid max-w-5xl gap-6 md:grid-cols-2">
           {feature.map((feature, idx) => (
             <div
-              className="flex flex-col items-center justify-between rounded-lg bg-accent p-6 text-center md:min-h-[300px] md:p-8"
+              className="flex flex-col justify-between rounded-lg bg-accent p-6 md:min-h-[300px] md:p-8"
               key={idx}
             >
               <span className="mb-6 flex size-11 items-center justify-center rounded-full bg-background">

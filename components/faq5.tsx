@@ -55,14 +55,14 @@ const Faq5 = ({
             {description}
           </p>
         </div>
-        <div className="mx-auto mt-14 max-w-2xl">
+        <div className="mx-auto mt-14 max-w-xl">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-8 flex flex-col items-center gap-3 text-center">
+            <div key={index} className="mb-8 flex gap-4">
               <span className="flex size-6 shrink-0 items-center justify-center rounded-sm bg-secondary font-mono text-xs text-primary">
                 {index + 1}
               </span>
               <div>
-                <div className="mb-2 flex items-center justify-center">
+                <div className="mb-2 flex items-center justify-between">
                   <h3 className="font-medium">{faq.question}</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">{faq.answer}</p>

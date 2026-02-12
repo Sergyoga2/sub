@@ -105,19 +105,19 @@ const Pricing2 = ({
             {heading}
           </h2>
           <p className="text-muted-foreground lg:text-xl">{description}</p>
-          <div className="flex w-full flex-col items-center gap-6 md:flex-row md:justify-center">
+          <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
             {plans.map((plan) => (
               <Card
                 key={plan.id}
                 className={cn(
-                  "flex w-80 flex-col justify-between text-center",
+                  "flex w-80 flex-col justify-between text-left",
                   plan.recommended &&
                     "ring-2 ring-primary shadow-xl shadow-primary/20"
                 )}
               >
                 <CardHeader>
                   {plan.recommended && (
-                    <div className="mx-auto mb-3 inline-flex w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                    <div className="mb-3 inline-flex w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                       Рекомендуемый
                     </div>
                   )}
@@ -127,7 +127,7 @@ const Pricing2 = ({
                   <p className="text-sm text-muted-foreground">
                     {plan.description}
                   </p>
-                  <div className="flex items-end justify-center">
+                  <div className="flex items-end">
                     <span className="text-4xl font-semibold">{plan.price}</span>
                     <span className="text-2xl font-semibold text-muted-foreground">
                       {plan.period}
@@ -140,7 +140,7 @@ const Pricing2 = ({
                     {plan.features.map((feature, index) => (
                       <li
                         key={index}
-                        className="flex items-center justify-center gap-2 text-sm"
+                        className="flex items-center gap-2 text-sm"
                       >
                         <CircleCheck className="size-4" />
                         <span>{feature.text}</span>
