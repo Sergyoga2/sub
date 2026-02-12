@@ -26,7 +26,7 @@ export default function Home() {
     <main className="landing-shell">
       <RevealSection>
         <Hero243
-          headingStart="Подписка на курсы"
+          headingStart="Подписка на навыки"
           headingSecondLine="Хекслета для"
           headingFlipWords={[
             "Тестировщиков",
@@ -48,45 +48,45 @@ export default function Home() {
 
       <RevealSection className="section-tint">
         <Feature43
-          title="Какие результаты даёт подписка"
+          title="Подписка позволит вам"
           buttonText="Выбрать подписку"
           buttonUrl="#pricing"
           className="py-16 md:py-20"
           features={[
             {
-              heading: "Уверенный рост в коде",
+              heading: "Быстрее расти в профессии",
               description:
-                "Прокачка ключевых технических компетенций для ежедневной работы в продуктовой команде.",
+                "Прокачивать ключевые навыки без хаотичного обучения и двигаться к стабильному результату.",
               icon: <Rocket className="size-6" />,
             },
             {
-              heading: "Сильнее в аналитике",
+              heading: "Увереннее проходить интервью",
               description:
-                "Навыки SQL, метрик, продуктовой логики и принятия решений на основе данных.",
+                "Закреплять теорию практикой и лучше отвечать на вопросы на технических собеседованиях.",
               icon: <ChartColumnIncreasing className="size-6" />,
             },
             {
-              heading: "Быстрее к следующему грейду",
+              heading: "Быстрее выходить на новый грейд",
               description:
-                "Каталог закрывает типовые skill-gap для перехода на новую роль или повышение.",
+                "Закрывать типовые skill-gap и готовиться к повышению или переходу в более сильную роль.",
               icon: <Briefcase className="size-6" />,
             },
             {
-              heading: "Меньше хаоса в обучении",
+              heading: "Учиться системно, а не урывками",
               description:
-                "Структурированные навыки помогают не распыляться и двигаться по приоритетам.",
+                "Двигаться по приоритетам и не тратить время на бессвязные материалы.",
               icon: <Target className="size-6" />,
             },
             {
-              heading: "Постоянное обновление знаний",
+              heading: "Поддерживать знания в актуальном состоянии",
               description:
-                "Вы не застреваете в старом контенте: подписка удобна для регулярного апдейта базы.",
+                "Регулярно обновлять базу навыков и не застревать в устаревшем контенте.",
               icon: <Gauge className="size-6" />,
             },
             {
-              heading: "Инвестиция в карьеру",
+              heading: "Сделать прокачку привычкой",
               description:
-                "Платите один раз за доступ к библиотеке и развиваете навыки, которые влияют на доход.",
+                "Учиться в своем темпе и стабильно усиливать навыки, которые влияют на карьеру и доход.",
               icon: <ChartColumnIncreasing className="size-6" />,
             },
           ]}
@@ -94,46 +94,50 @@ export default function Home() {
       </RevealSection>
 
       <RevealSection className="section-soft">
+        <GraduateTestimonials />
+      </RevealSection>
+
+      <RevealSection className="section-soft">
         <Feature43
-          title="Что вы получаете в подписке"
+          title="Подписка - это для прокачки"
           buttonText="Выбрать подписку"
           buttonUrl="#pricing"
           className="py-16 md:py-20"
           features={[
             {
-              heading: "Каталог из 56 навыков",
+              heading: "Технической базы",
               description:
-                "От JavaScript, Python и SQL до системного дизайна, аналитики и работы с данными.",
+                "56 навыков в одном каталоге: разработка, аналитика, DevOps, базы данных и архитектура.",
               icon: <Code2 className="size-6" />,
             },
             {
-              heading: "Фокус на практике",
+              heading: "Практики на реальных задачах",
               description:
-                "Каждый навык построен вокруг задач, которые встречаются в реальной работе.",
+                "Каждый навык построен вокруг кейсов, которые реально встречаются в работе.",
               icon: <MessageSquareCode className="size-6" />,
             },
             {
-              heading: "Гибкая траектория",
+              heading: "Гибкой траектории роста",
               description:
-                "Можно учить навыки по профессии, закрывать пробелы точечно или собирать личный план роста.",
+                "Можно закрывать пробелы точечно или идти по полной траектории для следующего шага в карьере.",
               icon: <Target className="size-6" />,
             },
             {
-              heading: "Для разработчиков и аналитиков",
+              heading: "Обучения в удобном ритме",
               description:
-                "Подходит начинающим и mid-level специалистам, которые хотят расти быстрее рынка.",
+                "Учитесь после работы, в дороге или по выходным, без жестких дедлайнов.",
               icon: <Users className="size-6" />,
             },
             {
-              heading: "Короткие учебные циклы",
+              heading: "Поддержки в процессе",
               description:
-                "Занимайтесь по 30-40 минут в день и стабильно усиливайте портфель навыков каждую неделю.",
+                "AI-помощник и сообщество помогают быстрее разбираться со сложными темами.",
               icon: <Gauge className="size-6" />,
             },
             {
-              heading: "Один платеж - вся библиотека",
+              heading: "Прокачки без лишних покупок",
               description:
-                "Не нужно покупать каждый навык отдельно: подписка открывает весь каталог сразу.",
+                "Один платеж открывает весь каталог навыков без покупки отдельных курсов.",
               icon: <Database className="size-6" />,
             },
           ]}
@@ -211,10 +215,6 @@ export default function Home() {
 
       <RevealSection className="section-soft">
         <LearningFormatSection />
-      </RevealSection>
-
-      <RevealSection className="section-soft">
-        <GraduateTestimonials />
       </RevealSection>
 
       <RevealSection className="section-soft">

@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { CircleCheck } from "lucide-react";
 import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react";
@@ -107,6 +107,8 @@ const Pricing2 = ({
   className,
 }: Pricing2Props) => {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const startTimerRef = useRef<number | null>(null);
+  const stopTimerRef = useRef<number | null>(null);
   const [showBurst, setShowBurst] = useState(false);
   const [burstPlayed, setBurstPlayed] = useState(false);
 
@@ -116,15 +118,21 @@ const Pricing2 = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting || burstPlayed) return;
-        setShowBurst(true);
         setBurstPlayed(true);
-        window.setTimeout(() => setShowBurst(false), 1400);
+        startTimerRef.current = window.setTimeout(() => {
+          setShowBurst(true);
+          stopTimerRef.current = window.setTimeout(() => setShowBurst(false), 1400);
+        }, 1000);
       },
       { threshold: 0.4 }
     );
 
     observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (startTimerRef.current) window.clearTimeout(startTimerRef.current);
+      if (stopTimerRef.current) window.clearTimeout(stopTimerRef.current);
+    };
   }, [burstPlayed]);
 
   const burstDots = useMemo(

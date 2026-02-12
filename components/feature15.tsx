@@ -45,9 +45,8 @@ const Feature15 = ({ className }: Feature15Props) => {
       <div className="container mx-auto max-w-5xl">
         <div className="flex w-full flex-col items-center">
           <div className="flex flex-col items-center space-y-4 text-center sm:space-y-6 md:max-w-3xl md:text-center">
-            <p className="text-sm text-muted-foreground">КОМУ ПОДХОДИТ ФОРМАТ</p>
             <h2 className="text-3xl font-medium md:text-5xl">
-              Кому будет полезна подписка Hexlet
+              Кому будет полезна подписка
             </h2>
 
             <p className="text-muted-foreground md:max-w-2xl">
