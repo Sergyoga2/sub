@@ -22,6 +22,7 @@ interface PricingPlan {
   description: string;
   price: string;
   period: string;
+  recommended?: boolean;
   features: PricingFeature[];
   button: {
     text: string;
@@ -108,9 +109,18 @@ const Pricing2 = ({
             {plans.map((plan) => (
               <Card
                 key={plan.id}
-                className="flex w-80 flex-col justify-between text-left"
+                className={cn(
+                  "flex w-80 flex-col justify-between text-left",
+                  plan.recommended &&
+                    "ring-2 ring-primary shadow-xl shadow-primary/20"
+                )}
               >
                 <CardHeader>
+                  {plan.recommended && (
+                    <div className="mb-3 inline-flex w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                      Рекомендуемый
+                    </div>
+                  )}
                   <CardTitle>
                     <p>{plan.name}</p>
                   </CardTitle>
@@ -139,7 +149,10 @@ const Pricing2 = ({
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Button asChild className="w-full">
+                  <Button
+                    asChild
+                    className="h-12 w-full text-base font-semibold transition hover:brightness-110 hover:shadow-lg"
+                  >
                     <a href={plan.button.url} target="_blank">
                       {plan.button.text}
                     </a>

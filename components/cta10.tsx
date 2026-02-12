@@ -43,12 +43,21 @@ const Cta10 = ({
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
             {buttons.secondary && (
-              <Button variant="outline" asChild>
+              <Button
+                variant="outline"
+                className="h-14 px-8 text-base font-semibold transition hover:bg-primary/10 hover:shadow-lg"
+                asChild
+              >
                 <a href={buttons.secondary.url}>{buttons.secondary.text}</a>
               </Button>
             )}
             {buttons.primary && (
-              <Button asChild variant="default" size="lg">
+              <Button
+                asChild
+                variant="default"
+                size="lg"
+                className="h-14 px-8 text-base font-semibold transition hover:brightness-110 hover:shadow-lg"
+              >
                 <a href={buttons.primary.url}>{buttons.primary.text}</a>
               </Button>
             )}

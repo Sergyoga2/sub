@@ -93,7 +93,11 @@ const Feature43 = ({
           </div>
           {buttonUrl && (
             <div className="mt-16 flex justify-center">
-              <Button size="lg" asChild>
+              <Button
+                size="lg"
+                className="h-14 px-8 text-base font-semibold transition hover:brightness-110 hover:shadow-lg"
+                asChild
+              >
                 <a href={buttonUrl}>{buttonText}</a>
               </Button>
             </div>

@@ -12,6 +12,7 @@ import {
 
 import { Cta10 } from "@/components/cta10";
 import { Faq1 } from "@/components/faq1";
+import { FloatingPricingCta } from "@/components/floating-pricing-cta";
 import { Hero243 } from "@/components/hero243";
 import { Feature43 } from "@/components/feature43";
 import { Pricing2 } from "@/components/pricing2";
@@ -24,7 +25,7 @@ export default function Home() {
         headingSecondLine="Хекслета для"
         headingFlipWords={[
           "Тестировщиков",
-          "Дата аналитиков",
+          "Аналитиков",
           "Разработчиков",
           "DevOps-инженеров",
         ]}
@@ -36,11 +37,13 @@ export default function Home() {
           "Понятные треки для роста",
           "Более 2000 заданий",
         ]}
+        className="py-20 md:py-24"
       />
       <Feature43
-        title="Что вы получаете в подписке Hexlet"
+        title="Что вы получаете в подписке"
         buttonText="Оформить подписку"
-        buttonUrl="https://subscription.hexlet.io/plans"
+        buttonUrl="#pricing"
+        className="py-16 md:py-20"
         features={[
           {
             heading: "Каталог из 56 навыков",
@@ -84,6 +87,7 @@ export default function Home() {
         title="Какие результаты даёт подписка"
         buttonText="Начать обучение"
         buttonUrl="#pricing"
+        className="py-16 md:py-20"
         features={[
           {
             heading: "Уверенный рост в коде",
@@ -125,8 +129,9 @@ export default function Home() {
       />
       <Pricing2
         sectionId="pricing"
-        heading="Тарифы подписки Hexlet Pro Skills"
+        heading="Тарифы подписки Hexlet"
         description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
+        className="py-16 md:py-20"
         plans={[
           {
             id: "month",
@@ -135,15 +140,15 @@ export default function Home() {
             price: "3 900 ₽",
             period: "/мес",
             features: [
-              { text: "Более 45 курсов" },
-              { text: "130+ навыков для развития" },
+              { text: "56 навыков" },
+              { text: "130+ упражнений для развития" },
               { text: "AI-помощник по обучению" },
               { text: "Онлайн-тренажер 24/7 с автопроверками" },
               { text: "Учебные проекты для тренировки" },
               { text: "Доступ в закрытое сообщество" },
             ],
             button: {
-              text: "Выбрать месячный",
+              text: "Выбрать",
               url: "https://subscription.hexlet.io/plans",
             },
           },
@@ -153,13 +158,14 @@ export default function Home() {
             description: "Для непрерывного роста",
             price: "2 900 ₽",
             period: "/мес",
+            recommended: true,
             features: [
               { text: "Выгода 25%" },
               { text: "При оплате 34 800 ₽ за год" },
               { text: "Те же опции, но дешевле" },
             ],
             button: {
-              text: "Выбрать годовой",
+              text: "Выбрать",
               url: "https://subscription.hexlet.io/plans",
             },
           },
@@ -172,17 +178,18 @@ export default function Home() {
             features: [
               { text: "Выгода 38%" },
               { text: "При оплате 86 400 ₽ за три года" },
-              { text: "Все курсы Хекслета доступны для прохождения" },
+              { text: "Все профессии Хекслета доступны для прохождения" },
               { text: "Лучший тариф для долгосрочного роста" },
             ],
             button: {
-              text: "Выбрать трехлетний",
+              text: "Выбрать",
               url: "https://subscription.hexlet.io/plans",
             },
           },
         ]}
       />
       <Faq1
+        className="py-16 md:py-20"
         heading="Частые вопросы о подписке"
         items={[
           {
@@ -218,6 +225,7 @@ export default function Home() {
         ]}
       />
       <Cta10
+        className="py-16 md:py-20"
         heading="Начните прокачку навыков сегодня"
         description="Оформите подписку и получите доступ ко всем 56 навыкам Hexlet. Чем раньше начнёте, тем быстрее увидите результат в работе и карьере."
         buttons={{
@@ -231,6 +239,7 @@ export default function Home() {
           },
         }}
       />
+      <FloatingPricingCta />
     </main>
   );
 }

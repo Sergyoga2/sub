@@ -57,7 +57,10 @@ const Hero243 = ({
             <p className="px-5 text-muted-foreground lg:text-lg">
               {description}
             </p>
-            <Button className="mx-5 h-12 rounded-lg" asChild>
+            <Button
+              className="mx-5 h-14 rounded-lg px-8 text-base font-semibold transition hover:brightness-110 hover:shadow-lg"
+              asChild
+            >
               <a href={buttonUrl}>{buttonText}</a>
             </Button>
           </div>
