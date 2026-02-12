@@ -124,7 +124,7 @@ const Pricing2 = ({
           stopTimerRef.current = window.setTimeout(() => setShowBurst(false), 1400);
         }, 1000);
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 }
     );
 
     observer.observe(sectionRef.current);
@@ -137,16 +137,14 @@ const Pricing2 = ({
 
   const burstDots = useMemo(
     () => [
-      { x: "-100px", y: "-75px", color: "#3c64ff", delay: "0ms" },
-      { x: "-60px", y: "-110px", color: "#1cb8be", delay: "120ms" },
-      { x: "10px", y: "-120px", color: "#2663ec", delay: "40ms" },
-      { x: "85px", y: "-95px", color: "#22c55e", delay: "90ms" },
-      { x: "110px", y: "-30px", color: "#06b6d4", delay: "30ms" },
-      { x: "100px", y: "45px", color: "#3c64ff", delay: "110ms" },
-      { x: "40px", y: "95px", color: "#22c55e", delay: "70ms" },
-      { x: "-35px", y: "100px", color: "#1cb8be", delay: "20ms" },
-      { x: "-95px", y: "50px", color: "#2663ec", delay: "150ms" },
-      { x: "-120px", y: "-10px", color: "#06b6d4", delay: "60ms" },
+      { top: "6%", left: "18%", color: "#3c64ff", delay: "0ms", size: "14px" },
+      { top: "2%", left: "50%", color: "#22c55e", delay: "130ms", size: "10px" },
+      { top: "7%", left: "82%", color: "#1cb8be", delay: "80ms", size: "12px" },
+      { top: "32%", left: "6%", color: "#2663ec", delay: "170ms", size: "11px" },
+      { top: "34%", left: "94%", color: "#06b6d4", delay: "60ms", size: "13px" },
+      { top: "72%", left: "10%", color: "#1cb8be", delay: "120ms", size: "10px" },
+      { top: "80%", left: "50%", color: "#3c64ff", delay: "40ms", size: "15px" },
+      { top: "74%", left: "88%", color: "#22c55e", delay: "150ms", size: "12px" },
     ],
     []
   );
@@ -184,13 +182,16 @@ const Pricing2 = ({
                     {burstDots.map((dot, index) => (
                       <span
                         key={index}
-                        className="yearly-confetti"
+                        className="absolute animate-ping rounded-full"
                         style={
                           {
-                            "--x": dot.x,
-                            "--y": dot.y,
+                            top: dot.top,
+                            left: dot.left,
                             backgroundColor: dot.color,
                             animationDelay: dot.delay,
+                            width: dot.size,
+                            height: dot.size,
+                            opacity: 0.9,
                           } as CSSProperties
                         }
                       />

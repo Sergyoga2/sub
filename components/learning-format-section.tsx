@@ -106,7 +106,7 @@ const LearningFormatSection = ({ className }: LearningFormatSectionProps) => {
                   muted
                   playsInline
                   preload="metadata"
-                  className="aspect-video w-full object-cover -my-[30px]"
+                  className="aspect-video w-full object-cover -my-[30px] scale-[1.1]"
                 />
                 <div className="pointer-events-none absolute top-3 right-3 rounded-full bg-black/45 p-1.5 text-white">
                   <PlayCircle className="size-5" />
