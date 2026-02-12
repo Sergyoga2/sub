@@ -82,8 +82,11 @@ const Feature43 = ({
           )}
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, i) => (
-              <div key={i} className="flex flex-col items-center text-center">
-                <div className="mb-5 flex size-16 items-center justify-center rounded-full bg-accent">
+              <div
+                key={i}
+                className="flex flex-col items-center rounded-2xl border border-[#dbe7ff] bg-white/80 p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2663ec]/15"
+              >
+                <div className="mb-5 flex size-16 items-center justify-center rounded-full bg-[#e8f0ff] text-[#2663ec]">
                   {feature.icon}
                 </div>
                 <h3 className="mb-2 text-xl font-semibold">{feature.heading}</h3>

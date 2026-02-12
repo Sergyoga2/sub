@@ -59,9 +59,9 @@ const Faq5 = ({
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="mb-8 flex flex-col items-center gap-3 text-center"
+              className="mb-5 rounded-2xl border border-[#dbe7ff] bg-white/85 p-5 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2663ec]/10"
             >
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-sm bg-secondary font-mono text-xs text-primary">
+              <span className="mx-auto mb-3 flex size-7 shrink-0 items-center justify-center rounded-md bg-[#e8f0ff] font-mono text-xs text-[#2663ec]">
                 {index + 1}
               </span>
               <div>

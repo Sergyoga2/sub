@@ -4,6 +4,7 @@ import {
   GraduationCap,
   Rocket,
 } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -54,15 +55,22 @@ const Feature15 = ({ className }: Feature15Props) => {
               учиться в удобном темпе: с фокусом на практику, системность и
               реальный результат.
             </p>
+            <Image
+              src="/hexlet-tracks.svg"
+              alt="Траектории обучения в подписке"
+              width={720}
+              height={420}
+              className="mt-4 rounded-2xl border border-[#d5e4ff] shadow-lg shadow-[#2663ec]/10"
+            />
           </div>
         </div>
         <div className="mx-auto mt-20 grid max-w-5xl gap-6 md:grid-cols-2">
           {feature.map((feature, idx) => (
             <div
-              className="flex flex-col items-center justify-between rounded-lg bg-accent p-6 text-center md:min-h-[300px] md:p-8"
+              className="flex flex-col items-center justify-between rounded-lg border border-[#dbe7ff] bg-white/90 p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2663ec]/15 md:min-h-[300px] md:p-8"
               key={idx}
             >
-              <span className="mb-6 flex size-11 items-center justify-center rounded-full bg-background">
+              <span className="mb-6 flex size-11 items-center justify-center rounded-full bg-[#e8f0ff] text-[#2663ec]">
                 {feature.icon}
               </span>
               <div>

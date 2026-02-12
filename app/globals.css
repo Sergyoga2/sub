@@ -49,24 +49,24 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #f5f8ff;
+  --foreground: #0f172a;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --primary: #2663ec;
+  --primary-foreground: #ffffff;
+  --secondary: #eaf0ff;
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --muted: #eef3ff;
+  --muted-foreground: #4b5563;
+  --accent: #e7eeff;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #d8e3ff;
+  --input: #d8e3ff;
+  --ring: #3c64ff;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -123,6 +123,60 @@
   }
   body {
     @apply bg-background text-foreground;
-    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at 10% -20%, rgba(38, 99, 236, 0.16), transparent 35%),
+      radial-gradient(circle at 90% 0%, rgba(28, 184, 190, 0.14), transparent 30%),
+      linear-gradient(180deg, #f7f9ff 0%, #f2f6ff 45%, #f8fbff 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .landing-shell {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .landing-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(38, 99, 236, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(38, 99, 236, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 85%);
+    z-index: -1;
+  }
+
+  .section-tint {
+    background: linear-gradient(180deg, rgba(38, 99, 236, 0.08), rgba(38, 99, 236, 0.03));
+    border-top: 1px solid rgba(38, 99, 236, 0.12);
+    border-bottom: 1px solid rgba(38, 99, 236, 0.12);
+  }
+
+  .section-soft {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(4px);
+  }
+
+  .pricing-highlight {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(60, 100, 255, 0.16), transparent 45%),
+      radial-gradient(circle at 80% 10%, rgba(28, 184, 190, 0.16), transparent 40%),
+      #ffffff;
+    border-radius: 24px;
+  }
+
+  .reveal-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 500ms ease, transform 500ms ease;
+  }
+
+  .reveal-section-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

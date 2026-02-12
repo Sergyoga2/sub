@@ -16,11 +16,13 @@ import { Faq5 } from "@/components/faq5";
 import { Hero243 } from "@/components/hero243";
 import { Feature43 } from "@/components/feature43";
 import { Pricing2 } from "@/components/pricing2";
+import { RevealSection } from "@/components/reveal-section";
 
 export default function Home() {
   return (
-    <main>
-      <Hero243
+    <main className="landing-shell">
+      <RevealSection>
+        <Hero243
         headingStart="Подписка на курсы"
         headingSecondLine="Хекслета для"
         headingFlipWords={[
@@ -39,7 +41,9 @@ export default function Home() {
         ]}
         className="py-20 md:py-24"
       />
-      <Feature43
+      </RevealSection>
+      <RevealSection className="section-soft">
+        <Feature43
         title="Что вы получаете в подписке"
         buttonText="Оформить подписку"
         buttonUrl="#pricing"
@@ -83,7 +87,9 @@ export default function Home() {
           },
         ]}
       />
-      <Feature43
+      </RevealSection>
+      <RevealSection className="section-tint">
+        <Feature43
         title="Какие результаты даёт подписка"
         buttonText="Начать обучение"
         buttonUrl="#pricing"
@@ -127,7 +133,9 @@ export default function Home() {
           },
         ]}
       />
-      <Pricing2
+      </RevealSection>
+      <RevealSection>
+        <Pricing2
         sectionId="pricing"
         heading="Тарифы подписки Hexlet"
         description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
@@ -188,8 +196,12 @@ export default function Home() {
           },
         ]}
       />
-      <Feature15 className="py-16 md:py-20" />
-      <Faq5
+      </RevealSection>
+      <RevealSection className="section-soft">
+        <Feature15 className="py-16 md:py-20" />
+      </RevealSection>
+      <RevealSection className="section-tint">
+        <Faq5
         className="py-16 md:py-20"
         badge="FAQ"
         heading="Частые вопросы о подписке"
@@ -227,7 +239,9 @@ export default function Home() {
           },
         ]}
       />
-      <Cta10
+      </RevealSection>
+      <RevealSection className="section-soft">
+        <Cta10
         className="py-16 md:py-20"
         heading="Начните прокачку навыков сегодня"
         description="Оформите подписку и получите доступ ко всем 56 навыкам Hexlet. Чем раньше начнёте, тем быстрее увидите результат в работе и карьере."
@@ -242,6 +256,7 @@ export default function Home() {
           },
         }}
       />
+      </RevealSection>
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import { TrendingUp, Users, Zap } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 import { cn } from "@/lib/utils";
@@ -15,6 +16,7 @@ interface Hero243Props {
   buttonText?: string;
   buttonUrl?: string;
   metrics?: [string, string, string];
+  socialProof?: string[];
   className?: string;
 }
 
@@ -31,11 +33,12 @@ const Hero243 = ({
     "Практика на реальных задачах",
     "Рост навыков каждую неделю",
   ],
+  socialProof = ["56 навыков", "2000+ заданий", "AI-помощник 24/7"],
   className,
 }: Hero243Props) => {
   return (
     <section className={cn("h-full w-full overflow-hidden py-32", className)}>
-      <div className="container mx-auto border-t border-b border-dashed">
+      <div className="container mx-auto overflow-hidden rounded-3xl border border-[#cfe0ff] bg-white/80 shadow-xl shadow-[#2663ec]/10">
         <div className="relative flex w-full max-w-5xl flex-col justify-start border border-t-0 border-dashed px-5 py-12 md:items-center md:justify-center lg:mx-auto">
           <p className="flex items-center gap-3 text-sm text-muted-foreground">
             <span className="inline-block size-2 rounded bg-green-500" />
@@ -63,6 +66,26 @@ const Hero243 = ({
             >
               <a href={buttonUrl}>{buttonText}</a>
             </Button>
+            <ul className="flex flex-wrap items-center justify-center gap-2 px-5 pt-3">
+              {socialProof.map((item) => (
+                <li
+                  key={item}
+                  className="rounded-full border border-[#bfd2ff] bg-[#edf3ff] px-3 py-1 text-xs font-medium text-[#1f3f8f]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="px-5 pt-4">
+              <Image
+                src="/hexlet-learning.svg"
+                alt="Платформа Hexlet с практикой и навыками"
+                width={720}
+                height={420}
+                className="mx-auto rounded-2xl border border-[#d5e4ff] shadow-lg shadow-[#2663ec]/10"
+                priority
+              />
+            </div>
           </div>
         </div>
         <ul className="mx-auto grid h-44 w-full max-w-5xl grid-cols-1 border border-b-0 border-dashed md:h-34 md:grid-cols-2 lg:h-24 lg:grid-cols-3">

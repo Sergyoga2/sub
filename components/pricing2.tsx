@@ -100,19 +100,22 @@ const Pricing2 = ({
   return (
     <section id={sectionId} className={cn("py-32", className)}>
       <div className="container mx-auto">
-        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 text-center">
+        <div className="pricing-highlight mx-auto flex w-full max-w-5xl flex-col items-center gap-6 border border-[#d7e4ff] p-8 text-center md:p-12">
           <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
             {heading}
           </h2>
           <p className="text-muted-foreground lg:text-xl">{description}</p>
+          <p className="rounded-full border border-[#bfd2ff] bg-[#edf3ff] px-4 py-1 text-sm font-medium text-[#1f3f8f]">
+            Без скрытых условий, отмена в любой момент
+          </p>
           <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
             {plans.map((plan) => (
               <Card
                 key={plan.id}
                 className={cn(
-                  "flex w-80 flex-col justify-between text-left",
+                  "flex w-80 flex-col justify-between border-[#dbe7ff] bg-white/90 text-left shadow-sm",
                   plan.recommended &&
-                    "ring-2 ring-primary shadow-xl shadow-primary/20"
+                    "ring-2 ring-primary shadow-xl shadow-primary/25"
                 )}
               >
                 <CardHeader>

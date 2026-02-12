@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
@@ -32,7 +33,7 @@ const Cta10 = ({
   return (
     <section className={cn("py-32", className)}>
       <div className="container mx-auto max-w-5xl">
-        <div className="flex w-full flex-col gap-16 overflow-hidden rounded-lg bg-accent p-8 text-center md:rounded-xl lg:flex-row lg:items-center lg:p-12">
+        <div className="flex w-full flex-col gap-10 overflow-hidden rounded-2xl border border-[#d5e4ff] bg-gradient-to-br from-[#eaf1ff] via-[#f4f8ff] to-[#e7fbf8] p-8 text-center shadow-xl shadow-[#2663ec]/10 md:rounded-3xl lg:flex-row lg:items-center lg:p-12">
           <div className="flex-1 lg:text-center">
             <h3 className="mb-3 text-2xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
               {heading}
@@ -41,6 +42,13 @@ const Cta10 = ({
               {description}
             </p>
           </div>
+          <Image
+            src="/hexlet-community.svg"
+            alt="Сообщество и поддержка обучения"
+            width={320}
+            height={190}
+            className="mx-auto rounded-xl border border-[#d5e4ff] shadow-md"
+          />
           <div className="flex shrink-0 flex-col items-center gap-2 sm:flex-row">
             {buttons.secondary && (
               <Button
