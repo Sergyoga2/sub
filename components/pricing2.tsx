@@ -124,11 +124,6 @@ const Pricing2 = ({
                 </CardHeader>
                 <CardContent>
                   <Separator className="mb-6" />
-                  {plan.id !== "plus" && (
-                    <p className="mb-3 font-semibold">
-                      Everything in Plus, and:
-                    </p>
-                  )}
                   <ul className="space-y-4">
                     {plan.features.map((feature, index) => (
                       <li
