@@ -31,7 +31,7 @@ const Cta10 = ({
 }: Cta10Props) => {
   return (
     <section className={cn("py-32", className)}>
-      <div className="container">
+      <div className="container mx-auto max-w-5xl">
         <div className="flex w-full flex-col gap-16 overflow-hidden rounded-lg bg-accent p-8 text-center md:rounded-xl lg:flex-row lg:items-center lg:p-12">
           <div className="flex-1 lg:text-center">
             <h3 className="mb-3 text-2xl font-semibold md:mb-4 md:text-4xl lg:mb-6">

@@ -47,7 +47,7 @@ const Faq5 = ({
 }: Faq5Props) => {
   return (
     <section className={cn("py-32", className)}>
-      <div className="container">
+      <div className="container mx-auto max-w-5xl">
         <div className="text-center">
           <Badge className="text-xs font-medium">{badge}</Badge>
           <h1 className="mt-4 text-4xl font-semibold">{heading}</h1>
