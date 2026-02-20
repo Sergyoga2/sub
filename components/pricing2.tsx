@@ -152,7 +152,7 @@ const Pricing2 = ({
   return (
     <section id={sectionId} ref={sectionRef} className={cn("py-32", className)}>
       <div className="container mx-auto">
-        <div className="pricing-highlight mx-auto flex w-full max-w-5xl flex-col items-center gap-6 border border-[#d7e4ff] p-8 text-center md:p-12">
+        <div className="pricing-highlight mx-auto flex w-full flex-col items-center gap-6 border border-[#d7e4ff] p-8 text-center md:p-12">
           <h2 className="text-4xl font-semibold text-pretty lg:text-6xl">
             {heading}
           </h2>

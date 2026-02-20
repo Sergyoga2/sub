@@ -42,7 +42,7 @@ interface Feature15Props {
 const Feature15 = ({ className }: Feature15Props) => {
   return (
     <section className={cn("py-32", className)}>
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto">
         <div className="flex w-full flex-col items-center">
           <div className="flex flex-col items-center space-y-4 text-center sm:space-y-6 md:max-w-3xl md:text-center">
             <h2 className="text-3xl font-medium md:text-5xl">
@@ -63,7 +63,7 @@ const Feature15 = ({ className }: Feature15Props) => {
             />
           </div>
         </div>
-        <div className="mx-auto mt-20 grid max-w-5xl gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-20 grid gap-6 md:grid-cols-2">
           {feature.map((feature, idx) => (
             <div
               className="flex flex-col items-center justify-between rounded-lg border border-[#dbe7ff] bg-white/90 p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2663ec]/15 md:min-h-[300px] md:p-8"

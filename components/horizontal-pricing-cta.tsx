@@ -9,7 +9,7 @@ interface HorizontalPricingCtaProps {
 const HorizontalPricingCta = ({ className }: HorizontalPricingCtaProps) => {
   return (
     <section className={cn("py-10", className)}>
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between gap-5 rounded-2xl border border-[#d5e4ff] bg-gradient-to-r from-[#edf3ff] to-[#e8f8f6] p-6 text-center md:flex-row md:text-left">
           <div>
             <p className="text-xl font-semibold md:text-2xl">
