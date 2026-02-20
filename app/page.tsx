@@ -1,13 +1,9 @@
 import {
   Briefcase,
   ChartColumnIncreasing,
-  Code2,
-  Database,
   Gauge,
-  MessageSquareCode,
   Rocket,
   Target,
-  Users,
 } from "lucide-react";
 
 import { Cta10 } from "@/components/cta10";
@@ -188,53 +184,6 @@ export default function Home() {
         <Feature15 className="py-16 md:py-20" />
       </RevealSection>
 
-      {/* 7. Подписка – это для прокачки */}
-      <RevealSection className="section-soft">
-        <Feature43
-          title="Подписка - это для прокачки"
-          buttonText="Выбрать подписку"
-          buttonUrl="#pricing"
-          className="py-16 md:py-20"
-          features={[
-            {
-              heading: "Технической базы",
-              description:
-                "56 навыков в одном каталоге: разработка, аналитика, DevOps, базы данных и архитектура.",
-              icon: <Code2 className="size-6" />,
-            },
-            {
-              heading: "Практики на реальных задачах",
-              description:
-                "Каждый навык построен вокруг кейсов, которые реально встречаются в работе.",
-              icon: <MessageSquareCode className="size-6" />,
-            },
-            {
-              heading: "Гибкой траектории роста",
-              description:
-                "Можно закрывать пробелы точечно или идти по полной траектории для следующего шага в карьере.",
-              icon: <Target className="size-6" />,
-            },
-            {
-              heading: "Обучения в удобном ритме",
-              description:
-                "Учитесь после работы, в дороге или по выходным, без жестких дедлайнов.",
-              icon: <Users className="size-6" />,
-            },
-            {
-              heading: "Поддержки в процессе",
-              description:
-                "AI-помощник и сообщество помогают быстрее разбираться со сложными темами.",
-              icon: <Gauge className="size-6" />,
-            },
-            {
-              heading: "Прокачки без лишних покупок",
-              description:
-                "Один платеж открывает весь каталог навыков без покупки отдельных курсов.",
-              icon: <Database className="size-6" />,
-            },
-          ]}
-        />
-      </RevealSection>
 
       {/* 8. Тарифы подписки Хекслит (второй раз) */}
       <RevealSection>
