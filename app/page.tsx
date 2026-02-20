@@ -21,6 +21,68 @@ import { LearningFormatSection } from "@/components/learning-format-section";
 import { Pricing2 } from "@/components/pricing2";
 import { RevealSection } from "@/components/reveal-section";
 
+const pricingPlans = [
+  {
+    id: "month",
+    name: "Месячный",
+    description: "Для знакомства с платформой",
+    price: "3 900 ₽",
+    period: "/мес",
+    features: [
+      { text: "56 навыков" },
+      { text: "130+ упражнений для развития" },
+      { text: "AI-помощник по обучению" },
+      { text: "Онлайн-тренажер 24/7 с автопроверками" },
+      { text: "Учебные проекты для тренировки" },
+      { text: "Доступ в закрытое сообщество" },
+    ],
+    button: {
+      text: "Выбрать",
+      url: "https://subscription.hexlet.io/plans",
+    },
+  },
+  {
+    id: "year",
+    name: "Годовой",
+    description: "Для непрерывного роста",
+    price: "2 900 ₽",
+    period: "/мес",
+    recommended: true,
+    features: [
+      { text: "Выгода 25%" },
+      { text: "При оплате 34 800 ₽ за год" },
+      { text: "Те же опции, но дешевле" },
+    ],
+    button: {
+      text: "Выбрать",
+      url: "https://subscription.hexlet.io/plans",
+    },
+  },
+  {
+    id: "three-year",
+    name: "Трехлетний",
+    description: "Максимальная выгода без ограничений",
+    price: "2 400 ₽",
+    period: "/мес",
+    features: [
+      { text: "Выгода 38%" },
+      { text: "При оплате 86 400 ₽ за три года" },
+      { text: "Все профессии Хекслета доступны для прохождения" },
+      { text: "Лучший тариф для долгосрочного роста" },
+    ],
+    button: {
+      text: "Выбрать",
+      url: "https://subscription.hexlet.io/plans",
+    },
+  },
+];
+
+const pricingPaymentHint = {
+  text: "Для оплаты картой выпущенной не в РФ",
+  linkText: "нажмите здесь",
+  linkUrl: "https://hexlet.io/subscription/new",
+};
+
 export default function Home() {
   return (
     <main className="landing-shell">
@@ -46,6 +108,29 @@ export default function Home() {
         />
       </RevealSection>
 
+      {/* 1. Тарифы подписки Хекслит */}
+      <RevealSection>
+        <Pricing2
+          sectionId="pricing"
+          heading="Тарифы подписки Hexlet"
+          description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
+          paymentHint={pricingPaymentHint}
+          className="py-16 md:py-20"
+          plans={pricingPlans}
+        />
+      </RevealSection>
+
+      {/* 2. Как проходит обучение */}
+      <RevealSection className="section-soft">
+        <LearningFormatSection />
+      </RevealSection>
+
+      {/* 3. Что мотивирует учиться дальше */}
+      <RevealSection className="section-soft">
+        <GraduateTestimonials />
+      </RevealSection>
+
+      {/* 4. Подписка позволит вам */}
       <RevealSection className="section-tint">
         <Feature43
           title="Подписка позволит вам"
@@ -93,10 +178,17 @@ export default function Home() {
         />
       </RevealSection>
 
+      {/* 5. Хотите быстрее выйти на новый уровень? */}
       <RevealSection className="section-soft">
-        <GraduateTestimonials />
+        <HorizontalPricingCta />
       </RevealSection>
 
+      {/* 6. Кому будет полезна подписка */}
+      <RevealSection className="section-soft">
+        <Feature15 className="py-16 md:py-20" />
+      </RevealSection>
+
+      {/* 7. Подписка – это для прокачки */}
       <RevealSection className="section-soft">
         <Feature43
           title="Подписка - это для прокачки"
@@ -144,87 +236,19 @@ export default function Home() {
         />
       </RevealSection>
 
+      {/* 8. Тарифы подписки Хекслит (второй раз) */}
       <RevealSection>
         <Pricing2
-          sectionId="pricing"
+          sectionId="pricing-bottom"
           heading="Тарифы подписки Hexlet"
           description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
-          paymentHint={{
-            text: "Для оплаты картой выпущенной не в РФ",
-            linkText: "нажмите здесь",
-            linkUrl: "https://hexlet.io/subscription/new",
-          }}
+          paymentHint={pricingPaymentHint}
           className="py-16 md:py-20"
-          plans={[
-            {
-              id: "month",
-              name: "Месячный",
-              description: "Для знакомства с платформой",
-              price: "3 900 ₽",
-              period: "/мес",
-              features: [
-                { text: "56 навыков" },
-                { text: "130+ упражнений для развития" },
-                { text: "AI-помощник по обучению" },
-                { text: "Онлайн-тренажер 24/7 с автопроверками" },
-                { text: "Учебные проекты для тренировки" },
-                { text: "Доступ в закрытое сообщество" },
-              ],
-              button: {
-                text: "Выбрать",
-                url: "https://subscription.hexlet.io/plans",
-              },
-            },
-            {
-              id: "year",
-              name: "Годовой",
-              description: "Для непрерывного роста",
-              price: "2 900 ₽",
-              period: "/мес",
-              recommended: true,
-              features: [
-                { text: "Выгода 25%" },
-                { text: "При оплате 34 800 ₽ за год" },
-                { text: "Те же опции, но дешевле" },
-              ],
-              button: {
-                text: "Выбрать",
-                url: "https://subscription.hexlet.io/plans",
-              },
-            },
-            {
-              id: "three-year",
-              name: "Трехлетний",
-              description: "Максимальная выгода без ограничений",
-              price: "2 400 ₽",
-              period: "/мес",
-              features: [
-                { text: "Выгода 38%" },
-                { text: "При оплате 86 400 ₽ за три года" },
-                { text: "Все профессии Хекслета доступны для прохождения" },
-                { text: "Лучший тариф для долгосрочного роста" },
-              ],
-              button: {
-                text: "Выбрать",
-                url: "https://subscription.hexlet.io/plans",
-              },
-            },
-          ]}
+          plans={pricingPlans}
         />
       </RevealSection>
 
-      <RevealSection className="section-soft">
-        <LearningFormatSection />
-      </RevealSection>
-
-      <RevealSection className="section-soft">
-        <Feature15 className="py-16 md:py-20" />
-      </RevealSection>
-
-      <RevealSection className="section-soft">
-        <HorizontalPricingCta />
-      </RevealSection>
-
+      {/* 9. Частые вопросы о подписке */}
       <RevealSection className="section-tint">
         <Faq5
           className="py-16 md:py-20"
@@ -266,6 +290,7 @@ export default function Home() {
         />
       </RevealSection>
 
+      {/* 10. Начните прокачку навыков сегодня */}
       <RevealSection className="section-soft">
         <Cta10
           className="py-16 md:py-20"

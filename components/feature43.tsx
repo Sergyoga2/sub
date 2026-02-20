@@ -72,7 +72,7 @@ const Feature43 = ({
   return (
     <section className={cn("py-32", className)}>
       <div className="container mx-auto">
-        <div className="mx-auto w-full max-w-5xl">
+        <div className="mx-auto w-full">
           {title && (
             <div className="mx-auto mb-16 max-w-3xl text-center">
               <h2 className="text-4xl font-medium text-pretty lg:text-5xl">

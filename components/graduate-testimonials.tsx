@@ -28,7 +28,7 @@ const graduates = [
 const GraduateTestimonials = ({ className }: GraduateTestimonialsProps) => {
   return (
     <section className={cn("py-16 md:py-20", className)}>
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto">
         <div className="rounded-3xl border border-[#d5e4ff] bg-white/90 p-6 shadow-xl shadow-[#2663ec]/10 md:p-8">
           <div className="mb-8 text-center">
             <p className="text-sm font-medium tracking-wide text-[#2663ec]">

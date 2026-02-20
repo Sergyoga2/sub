@@ -32,7 +32,7 @@ const Cta10 = ({
 }: Cta10Props) => {
   return (
     <section className={cn("py-32", className)}>
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto">
         <div className="flex w-full flex-col items-center gap-6 overflow-hidden rounded-2xl border border-[#d5e4ff] bg-gradient-to-br from-[#eaf1ff] via-[#f4f8ff] to-[#e7fbf8] p-8 text-center shadow-xl shadow-[#2663ec]/10 md:rounded-3xl lg:p-12">
           <h3 className="text-2xl font-semibold md:text-4xl">{heading}</h3>
           <p className="max-w-xl text-muted-foreground lg:text-lg">{description}</p>
