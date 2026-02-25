@@ -19,17 +19,17 @@ interface Hero243Props {
 }
 
 const Hero243 = ({
-  badgeText = "56 НАВЫКОВ В ОДНОЙ ПОДПИСКЕ",
+  badgeText = "56 КУРСОВ В ОДНОЙ ПОДПИСКЕ",
   headingStart = "Прокачивайте",
   headingSecondLine = "",
-  headingFlipWords = ["Программирование", "Аналитику", "Карьеру", "Навыки"],
-  description = "Подписка Hexlet открывает каталог из 56 практических навыков: от Python и JavaScript до SQL, Data Analytics и системного мышления.",
+  headingFlipWords = ["Программирование", "Аналитику", "Карьеру", "Курсы"],
+  description = "Подписка Хекслет открывает каталог из 56 практических курсов: от Python и JavaScript до SQL, Data Analytics и системного мышления.",
   buttonText = "Выбрать подписку",
   buttonUrl = "https://subscription.hexlet.io/plans",
   metrics = [
-    "56 навыков в каталоге",
+    "56 курсов в каталоге",
     "Практика на реальных задачах",
-    "Рост навыков каждую неделю",
+    "Рост по курсам каждую неделю",
   ],
   className,
 }: Hero243Props) => {

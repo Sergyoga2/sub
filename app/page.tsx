@@ -25,7 +25,7 @@ const pricingPlans = [
     price: "3 900 ₽",
     period: "/мес",
     features: [
-      { text: "56 навыков" },
+      { text: "56 курсов" },
       { text: "130+ упражнений для развития" },
       { text: "AI-помощник по обучению" },
       { text: "Онлайн-тренажер 24/7 с автопроверками" },
@@ -84,7 +84,7 @@ export default function Home() {
     <main className="landing-shell">
       <RevealSection>
         <Hero243
-          headingStart="Подписка на навыки"
+          headingStart="Подписка на курсы"
           headingSecondLine="Хекслета для"
           headingFlipWords={[
             "Тестировщиков",
@@ -96,7 +96,7 @@ export default function Home() {
           buttonText="Выбрать подписку"
           buttonUrl="#pricing"
           metrics={[
-            "56 навыков в каталоге",
+            "56 курсов в каталоге",
             "Понятные треки для роста",
             "Более 2000 заданий",
           ]}
@@ -104,29 +104,19 @@ export default function Home() {
         />
       </RevealSection>
 
-      {/* 1. Тарифы подписки Хекслит */}
+      {/* 1. Тарифы подписки Хекслет */}
       <RevealSection>
         <Pricing2
           sectionId="pricing"
-          heading="Тарифы подписки Hexlet"
-          description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
+          heading="Тарифы подписки Хекслет"
+          description="Выберите удобный формат и получите доступ ко всем 56 курсам каталога."
           paymentHint={pricingPaymentHint}
           className="py-16 md:py-20"
           plans={pricingPlans}
         />
       </RevealSection>
 
-      {/* 2. Как проходит обучение */}
-      <RevealSection className="section-soft">
-        <LearningFormatSection />
-      </RevealSection>
-
-      {/* 3. Что мотивирует учиться дальше */}
-      <RevealSection className="section-soft">
-        <GraduateTestimonials />
-      </RevealSection>
-
-      {/* 4. Подписка позволит вам */}
+      {/* 2. Подписка позволит вам */}
       <RevealSection className="section-tint">
         <Feature43
           title="Подписка позволит вам"
@@ -137,7 +127,7 @@ export default function Home() {
             {
               heading: "Быстрее расти в профессии",
               description:
-                "Прокачивать ключевые навыки без хаотичного обучения и двигаться к стабильному результату.",
+                "Прокачивать ключевые курсы без хаотичного обучения и двигаться к стабильному результату.",
               icon: <Rocket className="size-6" />,
             },
             {
@@ -149,7 +139,7 @@ export default function Home() {
             {
               heading: "Быстрее выходить на новый грейд",
               description:
-                "Закрывать типовые skill-gap и готовиться к повышению или переходу в более сильную роль.",
+                "Закрывать типовые пробелы в знаниях и готовиться к повышению или переходу в более сильную роль.",
               icon: <Briefcase className="size-6" />,
             },
             {
@@ -161,17 +151,27 @@ export default function Home() {
             {
               heading: "Поддерживать знания в актуальном состоянии",
               description:
-                "Регулярно обновлять базу навыков и не застревать в устаревшем контенте.",
+                "Регулярно обновлять базу курсов и не застревать в устаревшем контенте.",
               icon: <Gauge className="size-6" />,
             },
             {
               heading: "Сделать прокачку привычкой",
               description:
-                "Учиться в своем темпе и стабильно усиливать навыки, которые влияют на карьеру и доход.",
+                "Учиться в своем темпе и стабильно усиливать курсы, которые влияют на карьеру и доход.",
               icon: <ChartColumnIncreasing className="size-6" />,
             },
           ]}
         />
+      </RevealSection>
+
+      {/* 3. Что мотивирует учиться дальше */}
+      <RevealSection className="section-soft">
+        <GraduateTestimonials />
+      </RevealSection>
+
+      {/* 4. Как проходит обучение */}
+      <RevealSection className="section-soft">
+        <LearningFormatSection />
       </RevealSection>
 
       {/* 5. Хотите быстрее выйти на новый уровень? */}
@@ -184,20 +184,7 @@ export default function Home() {
         <Feature15 className="py-16 md:py-20" />
       </RevealSection>
 
-
-      {/* 8. Тарифы подписки Хекслит (второй раз) */}
-      <RevealSection>
-        <Pricing2
-          sectionId="pricing-bottom"
-          heading="Тарифы подписки Hexlet"
-          description="Выберите удобный формат и получите доступ ко всем 56 навыкам каталога."
-          paymentHint={pricingPaymentHint}
-          className="py-16 md:py-20"
-          plans={pricingPlans}
-        />
-      </RevealSection>
-
-      {/* 9. Частые вопросы о подписке */}
+      {/* 7. Частые вопросы о подписке */}
       <RevealSection className="section-tint">
         <Faq5
           className="py-16 md:py-20"
@@ -213,7 +200,7 @@ export default function Home() {
             {
               question: "Что входит в подписку?",
               answer:
-                "Подписка открывает доступ к библиотеке продвинутых материалов Хекслета (кроме профессий): 56 навыков, упражнения, тесты и учебные проекты по Python, Frontend и JavaScript, DevOps, базам данных, тестированию и другим направлениям.",
+                "Подписка открывает доступ к библиотеке продвинутых материалов Хекслета (кроме профессий): 56 курсов, упражнения, тесты и учебные проекты по Python, Frontend и JavaScript, DevOps, базам данных, тестированию и другим направлениям.",
             },
             {
               question: "Что будет, если я хочу начать с нуля?",
@@ -239,12 +226,12 @@ export default function Home() {
         />
       </RevealSection>
 
-      {/* 10. Начните прокачку навыков сегодня */}
+      {/* 8. Начните прокачку курсов сегодня */}
       <RevealSection className="section-soft">
         <Cta10
           className="py-16 md:py-20"
-          heading="Начните прокачку навыков сегодня!"
-          description="Оформите подписку и получите доступ ко всем 56 навыкам Hexlet. Чем раньше начнёте, тем быстрее увидите результат в работе и карьере."
+          heading="Начните прокачку курсов сегодня!"
+          description="Оформите подписку и получите доступ ко всем 56 курсам Хекслет. Чем раньше начнёте, тем быстрее увидите результат в работе и карьере."
           buttons={{
             primary: {
               text: "Хочу прокачаться!",
