@@ -32,7 +32,7 @@ const GraduateTestimonials = ({ className }: GraduateTestimonialsProps) => {
         <div className="rounded-3xl border border-[#d5e4ff] bg-white/90 p-6 shadow-xl shadow-[#2663ec]/10 md:p-8">
           <div className="mb-8 text-center">
             <p className="text-sm font-medium tracking-wide text-[#2663ec]">
-              ОПЫТ ВЫПУСКНИКОВ HEXLET
+              ОПЫТ ВЫПУСКНИКОВ ХЕКСЛЕТ
             </p>
             <h2 className="mt-2 text-3xl font-semibold md:text-4xl">
               Что мотивирует учиться дальше

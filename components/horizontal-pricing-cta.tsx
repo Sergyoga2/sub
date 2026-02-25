@@ -16,7 +16,7 @@ const HorizontalPricingCta = ({ className }: HorizontalPricingCtaProps) => {
               Хотите быстрее выйти на новый уровень?
             </p>
             <p className="mt-1 text-sm text-muted-foreground md:text-base">
-              Откройте доступ к каталогу навыков и начните прокачку уже сегодня!
+              Откройте доступ к каталогу курсов и начните прокачку уже сегодня!
             </p>
           </div>
           <Button
